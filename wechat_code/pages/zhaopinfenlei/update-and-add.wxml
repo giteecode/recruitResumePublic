@@ -1,0 +1,31 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+
+    <view class="item-box">
+        <view class="item-label">招聘分类</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.zhaopinfenlei==true}}"  placeholder="招聘分类" model:value="{{zhaopinfenlei}}" />
+    </view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

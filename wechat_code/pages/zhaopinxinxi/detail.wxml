@@ -1,0 +1,114 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#6484ff30'   indicator-active-color="#ffffff"   autoplay="{{true}}"  circular="{{true}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"   wx:key="{{index}}">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+
+
+
+
+
+
+
+
+<view class="detail-box">
+
+<view class="price-box">
+<view  wx:if="{{islike}}" class="iconfont icon-likefill2  storeUp"  bind:tap="cancelLikeTap"></view>
+<view wx:else="" class="iconfont   icon-likeline2 cancel-storeUp"   bind:tap="likeTap"></view>
+</view>
+
+<view class="detail-item-box" >
+<view class="detail-item-label">公司名称：</view>
+<view class="detail-item-text">{{detailList.gongsimingcheng}}</view>
+</view>
+<view class="detail-detail-img-box">
+<view class="detail-item-label">封面：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.fengmian}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">工作岗位：</view>
+<view class="detail-item-text">{{detailList.gongzuogangwei}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">招聘分类：</view>
+<view class="detail-item-text">{{detailList.zhaopinfenlei}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">工作城市：</view>
+<view class="detail-item-text">{{detailList.gongzuochengshi}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">学历要求：</view>
+<view class="detail-item-text">{{detailList.xueliyaoqiu}}</view>
+</view>
+    <!-- ${column.loginUser}, zhuanyeyaoqiu,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">专业要求：</view>
+<view class="detail-item-text">{{detailList.zhuanyeyaoqiu}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, lianxifangshi,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">联系方式：</view>
+<view class="detail-item-text">{{detailList.lianxifangshi}}</view>
+</view>
+
+
+    <!-- ${column.loginUser}, storeupnum,普-->
+<view class="detail-item-box" >
+<view class="detail-item-label">收藏数量：</view>
+<view class="detail-item-text">{{detailList.storeupnum}}</view>
+</view>
+
+
+
+
+
+
+<view class="detail-item-box">
+<view class="detail-item-label">岗位要求</view>
+<view class="detail-item-text">{{detailList.gangweiyaoqiu}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+<button  class="common-btn"  wx:if="{{gangweishenqingShow}}"
+     data-info="gangweishenqing,'','',''" bind:tap="onAcrossTap" >
+投递简历
+</button>
+    <button  class="common-btn"  wx:if="{{!gangweishenqingShow}}"
+             data-info="gangweishenqing,'','',''" bind:tap="onAcrossTap" >
+        投递简历
+    </button>
+
+
+    
+
+
+</view>
+
+</view>
+</view>

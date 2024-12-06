@@ -1,0 +1,127 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+
+    <view class="item-box">
+        <view class="item-label">公司名称</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.gongsimingcheng==true}}"  placeholder="公司名称" model:value="{{gongsimingcheng}}" />
+    </view>
+
+<view class="item-box"    bindtap="uploadfengmian">
+    <view   class="item-label">封面</view>
+    <image  src="{{fengmianPath?fengmianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+
+    <view class="item-box">
+        <view class="item-label">工作岗位</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.gongzuogangwei==true}}"  placeholder="工作岗位" model:value="{{gongzuogangwei}}" />
+    </view>
+
+<view class="item-box">
+<view class="item-label" >招聘分类</view>
+<picker   class="down-item-picker"     bindchange="zhaopinfenleiChange" value="{{zhaopinfenleiIndex}}"  range="{{zhaopinfenleiList}}">
+    <view class="down-item-picker-text">
+        {{zhaopinfenleiIndex||zhaopinfenleiIndex==0?zhaopinfenleiList[zhaopinfenleiIndex]:"请选择招聘分类"}}
+    </view>
+</picker>
+</view>
+
+    <view class="item-box">
+        <view class="item-label">工作城市</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.gongzuochengshi==true}}"  placeholder="工作城市" model:value="{{gongzuochengshi}}" />
+    </view>
+
+
+    <view class="item-box">
+        <view class="item-label">学历要求</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.xueliyaoqiu==true}}"  placeholder="学历要求" model:value="{{xueliyaoqiu}}" />
+    </view>
+
+
+    <view class="item-box">
+        <view class="item-label">专业要求</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.zhuanyeyaoqiu==true}}"  placeholder="专业要求" model:value="{{zhuanyeyaoqiu}}" />
+    </view>
+
+
+    <view class="item-box">
+        <view class="item-label">联系方式</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.lianxifangshi==true}}"  placeholder="联系方式" model:value="{{lianxifangshi}}" />
+    </view>
+
+
+    <view class="item-box">
+        <view class="item-label">收藏数量</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.storeupnum==true}}"  placeholder="收藏数量" model:value="{{storeupnum}}" />
+    </view>
+
+<view class="item-box"  >
+    <view class="item-label">岗位要求</view>
+
+    <textarea model:value="{{gangweiyaoqiu}}" placeholder="岗位要求"     data-info="{{gangweiyaoqiu}}" maxlength="300" id="gangweiyaoqiu"></textarea>
+</view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>
